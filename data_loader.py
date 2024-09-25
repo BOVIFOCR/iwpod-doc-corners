@@ -78,7 +78,7 @@ def load_data(cfg):
         if len(cfg['label_dirs']) > 1:
             ann_dirs = {im:an for im, an in zip(im_dirs, cfg['label_dirs'])}
         else:
-            ann_dirs = {im:cfg['label_dirs'] for im in im_dirs}
+            ann_dirs = {im:cfg['label_dirs'][0] for im in im_dirs}
     else:
         ann_dirs = {im: im for im in im_dirs}
     
@@ -87,7 +87,6 @@ def load_data(cfg):
     for ext in exts:
         for d in im_dirs:
             ims += glob(f"{d}/*{ext}")
-    #ims = ["./rgs_anonimizados_disponibilizados/verso/imagens/12beba73-659e-48f1-8965-a3b66e106e79.jpeg"]
 
     anns = ims[:]
     degs = []
@@ -153,7 +152,6 @@ def gen_closeup(im, pts):
     right = int(min(right + gap_width, w))
 
     close_im = im[top:bottom,left:right]
-    #cv2.imwrite("e.png", close_im)
 
     close_pts = [
         [bottom_right[0] - left, bottom_right[1] - top],
@@ -217,7 +215,6 @@ def main(cfg):
 
         format_and_save(wild_im, wild_pts, "rg_dataset/wild/" + os.path.split(a)[-1][:-5])
         format_and_save(close_im, close_pts, "rg_dataset/closeup/" + os.path.split(a)[-1][:-5])
-        #cv2.imwrite(f"rg_dataset/closeup/{os.path.split(a)[-1][:-5]}_{d}.jpg", base_im)
 
         ws.append(width)
         hs.append(height)
