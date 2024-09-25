@@ -1,0 +1,40 @@
+`data_loader.py`: Prepara o dataset para o formato da IWPOD-NET e gera as imagens do protocolo closeup (pegando as imagens origem e croppando para centralizar o documento, com um padding dos quatro lados). Comando para rodar: `python data_loader.py -c load_data_config.json`
+
+O formato de input para o script corresponde ao modelo enviado pela UNICO, notadamente um JSON (exemplo em `rg_dataset/`)
+O formato de input da IWPOD-NET é:
+```
+4,0.1,0.9,0.9,0.1,0.2,0.2,0.8,0.8
+```
+onde a primeira posição denota que são quatro pontos, as quatro posições seguintes denotam as coordenadas (relativas, 0-1) no eixo x (da largura), e as quatro posições finais denotam as coordenadas no eixo y (da altura), começando na coordenada top-left e indo em sentido horário até a coordenada bottom left. Exemplo em `rg_dataset` também. 
+
+Para usar, configurar o arquivo `load_data_config.json`. Não é necessário que frente e verso, anotações e imagens estejam em diretórios separados. Caso as imagens não estejam na posição correta (de cabeça pra baixo ou viradas 90º pros lados), especificar de acordo com os exemplos de `degrees_files` no diretório `rg_dataset/`.
+
+Para gerar os splits de treino, teste e validação:
+```
+python make_prots.py
+	-n 10 		# Número de folds - estou trabalhando apenas com 10
+	-p wild		# 'wild' ou 'closeup'
+```
+
+Para treinar o modelo:
+```
+python train_iwpodnet_tf2.py
+    -md results/wild/fold_1_of_10   		   # Diretório para salvar o modelo treinado
+    -n iwpodnet_wild_1_of_10        		   # Nome do modelo
+    -tr rg_dataset/prots/wild_prot_1_10.json   # Protocolo com os splits de treino/valid/teste
+    -e 10000        # Número máximo de épocas
+    -v              # Realizar validação (ativa early stopping)
+    -p 500          # Épocas de paciência do early stopping
+    -se 500         # Salvar modelo a cada -se épocas
+    -bs 32          # Batch size
+    -lr 0.001       # Learning rate
+```
+
+Para testar o modelo:
+```
+python test_iwpodnet_tr2.py
+    -m results/wild/fold_1_of_10/iwpodnet_wild_1_of_10  # Modelo treinado (-md + -n do comando do treino)
+    -d rg_dataset/prots/wild_prot_1_10.json    			# Protocolo com o split de teste correspondente ao modelo
+    -bs 1          # Batch size - sempre faço com 1 para avaliar runtime
+    -si            # Salvar imagens
+```
