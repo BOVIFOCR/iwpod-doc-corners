@@ -1,0 +1,277 @@
+[
+    {
+        "region_id": 0,
+        "region_shape_attributes": {
+            "width": 1872,
+            "height": 1285
+        }
+    },
+    {
+        "region_id": 1,
+        "region_shape_attributes": {
+            "name": "doc",
+            "points": [
+                [
+                    210,
+                    171
+                ],
+                [
+                    1710,
+                    154
+                ],
+                [
+                    1715,
+                    784
+                ],
+                [
+                    1713,
+                    1173
+                ],
+                [
+                    212,
+                    1159
+                ],
+                [
+                    207,
+                    888
+                ]
+            ]
+        }
+    },
+    {
+        "region_id": 2,
+        "region_shape_attributes": {
+            "name": "nome",
+            "points": [
+                [
+                    771,
+                    433
+                ],
+                [
+                    1311,
+                    433
+                ],
+                [
+                    1311,
+                    488
+                ],
+                [
+                    771,
+                    484
+                ]
+            ]
+        },
+        "region_attributes": {
+            "transcription": "aaaaa aa aaaaa aaaaaa",
+            "tag": "nome",
+            "tag_type": "sensitive",
+            "info_type": "p"
+        }
+    },
+    {
+        "region_id": 3,
+        "region_shape_attributes": {
+            "name": "filiacao1",
+            "points": [
+                [
+                    766,
+                    642
+                ],
+                [
+                    1193,
+                    639
+                ],
+                [
+                    1192,
+                    679
+                ],
+                [
+                    769,
+                    679
+                ]
+            ]
+        },
+        "region_attributes": {
+            "transcription": "aaaaaaa aaaaaa aaaaaa",
+            "tag": "filiacao1",
+            "tag_type": "sensitive",
+            "info_type": "p"
+        }
+    },
+    {
+        "region_id": 4,
+        "region_shape_attributes": {
+            "name": "filiacao2",
+            "points": [
+                [
+                    765,
+                    719
+                ],
+                [
+                    1169,
+                    717
+                ],
+                [
+                    1172,
+                    759
+                ],
+                [
+                    767,
+                    759
+                ]
+            ]
+        },
+        "region_attributes": {
+            "transcription": "aaaaaaa aaaaa aa aaaaa",
+            "tag": "filiacao2",
+            "tag_type": "sensitive",
+            "info_type": "p"
+        }
+    },
+    {
+        "region_id": 5,
+        "region_shape_attributes": {
+            "name": "datanasc",
+            "points": [
+                [
+                    766,
+                    849
+                ],
+                [
+                    946,
+                    848
+                ],
+                [
+                    948,
+                    885
+                ],
+                [
+                    765,
+                    886
+                ]
+            ]
+        },
+        "region_attributes": {
+            "transcription": "00/00/0000",
+            "tag": "datanasc",
+            "tag_type": "sensitive",
+            "info_type": "p"
+        }
+    },
+    {
+        "region_id": 6,
+        "region_shape_attributes": {
+            "name": "orgaoexp",
+            "points": [
+                [
+                    1094,
+                    848
+                ],
+                [
+                    1160,
+                    847
+                ],
+                [
+                    1161,
+                    887
+                ],
+                [
+                    1096,
+                    887
+                ]
+            ]
+        },
+        "region_attributes": {
+            "transcription": "aaa",
+            "tag": "orgaoexp",
+            "tag_type": "sensitive",
+            "info_type": "p"
+        }
+    },
+    {
+        "region_id": 7,
+        "region_shape_attributes": {
+            "name": "naturalidade",
+            "points": [
+                [
+                    765,
+                    928
+                ],
+                [
+                    1061,
+                    929
+                ],
+                [
+                    1061,
+                    968
+                ],
+                [
+                    766,
+                    969
+                ]
+            ]
+        },
+        "region_attributes": {
+            "transcription": "aaaaa aaaaaa aa",
+            "tag": "naturalidade",
+            "tag_type": "sensitive",
+            "info_type": "p"
+        }
+    },
+    {
+        "region_id": 8,
+        "region_shape_attributes": {
+            "name": "assinatura",
+            "points": [
+                [
+                    901,
+                    1053
+                ],
+                [
+                    1100,
+                    966
+                ],
+                [
+                    1474,
+                    985
+                ],
+                [
+                    1473,
+                    1118
+                ],
+                [
+                    1356,
+                    1096
+                ],
+                [
+                    972,
+                    1096
+                ]
+            ]
+        }
+    },
+    {
+        "region_id": 9,
+        "region_shape_attributes": {
+            "name": "face",
+            "points": [
+                [
+                    241,
+                    493
+                ],
+                [
+                    692,
+                    480
+                ],
+                [
+                    741,
+                    1153
+                ],
+                [
+                    173,
+                    1147
+                ]
+            ]
+        }
+    }
+]
