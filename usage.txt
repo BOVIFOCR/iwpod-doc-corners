@@ -9,11 +9,19 @@ onde a primeira posição denota que são quatro pontos, as quatro posições se
 
 Para usar, configurar o arquivo `load_data_config.json`. Não é necessário que frente e verso, anotações e imagens estejam em diretórios separados. Caso as imagens não estejam na posição correta (de cabeça pra baixo ou viradas 90º pros lados), especificar de acordo com os exemplos de `degrees_files` no diretório `rg_dataset/`.
 
+O script fmt.py anota uma bounding box para ilustrar a anotação de input da iwpod-net. Um exemplo de resultado está em `rg_dataset`. Uso:
+```
+python fmt.py
+    -i rg_dataset/example_image.jpg	 # source --image
+    -l rg_dataset/example_iwpod.txt	 # source --label
+    -o rg_dataset/example_annotated.jpg  # place of --output
+```
+
 Para gerar os splits de treino, teste e validação:
 ```
 python make_prots.py
-	-n 10 		# Número de folds - estou trabalhando apenas com 10
-	-p wild		# 'wild' ou 'closeup'
+    -n 10 		# Número de folds - estou trabalhando apenas com 10
+    -p wild		# 'wild' ou 'closeup'
 ```
 
 Para treinar o modelo:
