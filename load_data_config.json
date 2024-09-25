@@ -1,0 +1,15 @@
+{
+    "image_dirs": [
+        "./rgs_anonimizados_disponibilizados/frente/imagens",
+        "./rgs_anonimizados_disponibilizados/verso/imagens"
+    ],
+    "label_dirs": [
+        "./rgs_anonimizados_disponibilizados/frente/anotacoes",
+        "./rgs_anonimizados_disponibilizados/verso/anotacoes"
+    ],
+    "degrees_files": [
+        "./rg_dataset/front_files.txt",
+        "./rg_dataset/back_files.txt"
+    ],
+    "extensions": [".jpg", ".jpeg", ".png"]
+}
