@@ -1,0 +1,4 @@
+Levenshtein
+vertexai
+unidecode
+opencv-python
