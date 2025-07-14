@@ -1,6 +1,6 @@
 # Exploring Light-Weight Object Recognition for Real-Time Document Detection
 
-This repository contains the code for all of the experiments done in the paper "Exploring Light-Weight Object Recognition for Real-Time Document Detection". We outsource the IWPOD-Net implementation from its original repository from which this is a fork. NBID, the dataset we used in our experiments, is available [here](https://github.com/BOVIFOCR/NBID-Dataset-Towards-Robust-Information-Extraction-in-Official-Documents).
+This repository contains the code for all of the experiments done in the paper "Exploring Light-Weight Object Recognition for Real-Time Document Detection". We outsource the IWPOD-Net implementation from its original repository from which this is a fork. It is available [here](https://github.com/claudiojung/iwpod-net). NBID, the dataset we used in our experiments, is available [here](https://github.com/BOVIFOCR/NBID-Dataset-Towards-Robust-Information-Extraction-in-Official-Documents).
 
 ## Training the model
 
